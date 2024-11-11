@@ -1,0 +1,32 @@
+    .steps-child {
+        @apply relative flex flex-col justify-between items-center w-80
+    }
+
+    .steps-child:not(:first-child):before {
+        @apply content-[''] bg-white absolute w-full h-[3px] right-2/4 top-1/3 -translate-y-2/4
+    }
+
+    .steps {
+        @apply w-10 h-10 flex items-center justify-center z-10 relative bg-slate-700 rounded-full font-semibold text-white
+    }
+
+    .active .steps {
+        @apply bg-sky-600
+    }
+
+    .btn {
+        @apply bg-gray-700 rounded-md py-[10px] px-[30px] justify-center items-center flex gap-9
+    }
+
+    .complete .steps {
+        @apply bg-green-600
+    }
+
+    .complete p {
+        @apply text-white
+    }
+
+    .complete:not(:first-child)::before,
+    .active:not(:first-child):before {
+        @apply bg-green-600
+    }
